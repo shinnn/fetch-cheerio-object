@@ -2,9 +2,10 @@
 
 [![NPM version](https://badge.fury.io/js/grunt-esnext.svg)](http://badge.fury.io/js/grunt-esnext)
 [![Build Status](https://travis-ci.org/shinnn/grunt-esnext.svg?branch=master)](https://travis-ci.org/shinnn/grunt-esnext)
+[![Dependency Status](https://david-dm.org/shinnn/grunt-esnext.svg)](https://david-dm.org/shinnn/grunt-esnext)
 [![devDependency Status](https://david-dm.org/shinnn/grunt-esnext/dev-status.svg)](https://david-dm.org/shinnn/grunt-esnext#info=devDependencies)
 
-Grunt task to transform JS.next to JS.today with [esnext](https://github.com/square/esnext)
+Grunt task for compiling JS.next to JS.today with [esnext](https://github.com/square/esnext)
 
 ## Getting Started
 
@@ -24,7 +25,34 @@ grunt.loadNpmTasks('grunt-esnext');
 
 ## The `esnext` task
 
-(Docs coming soon.)
+Run this task with the `grunt esnext` command.
+
+### Options
+
+[All esnext options](https://github.com/square/esnext/blob/master/lib/index.js#L63-L96) are available except for source map.
+
+## Usage Example
+
+```javascript
+grunt.initConfig({
+  esnext: {
+    options: {
+      includeRuntime: true
+    },
+    dist: {
+      src: ['src/main/*.js'],
+      dest: 'dist/main.js' 
+    }
+  }
+});
+
+grunt.loadNpmTasks('grunt-esnext');
+grunt.registerTask('default', ['esnext']);
+```
+
+## TODO
+
+* Support source map
 
 ## License
 

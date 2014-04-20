@@ -1,6 +1,6 @@
 {
   "name": "grunt-esnext",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Grunt task to transform JS.next to JS.today with esnext",
   "homepage": "https://github.com/shinnn/grunt-esnext",
   "repository": {

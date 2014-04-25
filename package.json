@@ -18,6 +18,9 @@
   "keywords": [
     "gruntplugin",
     "es6",
+    "esnext",
+    "harmony",
+    "compiler",
     "transpiler",
     "language"
   ],
@@ -35,7 +38,7 @@
   ],
   "dependencies": {
     "chalk": "^0.4.0",
-    "esnext": "^0.7.6"
+    "esnext": "^0.7.7"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"
@@ -45,10 +48,9 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-release": "~0.7.0",
-    "grunt-mocha-test": "^0.10.0",
+    "grunt-mocha-test": "^0.10.2",
     "load-grunt-tasks": "^0.4.0",
     "time-grunt": "^0.3.1",
-    "jshint-stylish": "~0.1.5",
-    "clone": "~0.1.11"
+    "jshint-stylish": "~0.1.5"
   }
 }

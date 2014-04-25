@@ -22,7 +22,7 @@ var defaultOptions = {
 module.exports = function (grunt) {
   grunt.registerMultiTask(
     'esnext',
-    'Merge multiple data into a file or Grint config.',
+    'Merge multiple data into a file or Grunt config.',
     function() {
       var options = this.options(defaultOptions);
     

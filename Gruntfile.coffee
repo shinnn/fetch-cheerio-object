@@ -1,5 +1,5 @@
-# grunt-merge-data
-# Copyright (c) 2013 - 2014 Shinnosuke Watanabe
+# grunt-esnext
+# Copyright (c) 2014 Shinnosuke Watanabe
 # Licensed under the MIT license.
 
 module.exports = (grunt) ->
@@ -24,61 +24,58 @@ module.exports = (grunt) ->
       without_classes:
         options:
           'class': false
-        files:
-          'test/actual/without_class.js': ['test/fixtures/class.js']
+        src: ['test/fixtures/class.js']
+        dest: 'test/actual/without_class.js'
       without_arrow_function:
         options:
-          arrowFunction: false,
+          arrowFunction: false
           # TODO: es6-default-params also compiles arrow functions
           defaultParams: false
-        files:
-          'test/actual/without_arrow_function.js': ['test/fixtures/arrow_function.js']
+        src: ['test/fixtures/arrow_function.js']
+        dest: 'test/actual/without_arrow_function.js'
       without_default_params:
         options:
           defaultParams: false
-        files:
-          'test/actual/without_default_params.js': ['test/fixtures/default_params.js']
+        src: ['test/fixtures/default_params.js']
+        dest: 'test/actual/without_default_params.js'
       without_templates:
         options:
           templates: false
-        files:
-          'test/actual/without_templates.js': ['test/fixtures/templates.js']
+        src: ['test/fixtures/templates.js']
+        dest: 'test/actual/without_templates.js'
       without_rest:
         options:
           rest: false
-        files:
-          'test/actual/without_rest.js': ['test/fixtures/rest.js']
+        src: ['test/fixtures/rest.js']
+        dest: 'test/actual/without_rest.js'
       without_spread:
         options:
           spread: false
-        files:
-          'test/actual/without_spread.js': ['test/fixtures/spread.js']
+        src: ['test/fixtures/spread.js']
+        dest: 'test/actual/without_spread.js'
       without_generator:
         options:
           generator: false
-        files:
-          'test/actual/without_generator.js': ['test/fixtures/generator.js']
+        src: ['test/fixtures/generator.js']
+        dest: 'test/actual/without_generator.js'
       all_together_without_runtime:
-        files:
-          'test/actual/all_together_without_runtime.js': ['test/fixtures/all_together.js']
+        src: ['test/fixtures/all_together.js']
+        dest: 'test/actual/all_together_without_runtime.js'
       all_together:
         options:
           generator:
             includeRuntime: true
-        files:
-          'test/actual/all_together.js': ['test/fixtures/all_together.js']
+        src: ['test/fixtures/all_together.js']
+        dest: 'test/actual/all_together.js'
 
     # Unit tests.
     nodeunit:
-      tests: ['test/*_test.js'],
+      tests: ['test/*_test.js']
 
-    release:
-      options: {}
-  
-  grunt.registerTask 'esnext', ->
+    release: {}
   
   grunt.registerTask 'compile', ->
-    { code } = compile grunt.file.read('src/esnext.js')
+    { code } = compile grunt.file.read 'src/esnext.js'
     grunt.file.write 'tasks/esnext.js', code
     
     # Actually load this plugin's task

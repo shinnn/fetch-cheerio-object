@@ -1,7 +1,7 @@
 'use strict';
 
-var grunt = require('grunt'),
-    esprima = require('esprima');
+var grunt = require('grunt');
+var esprima = require('esprima');
 
 /*
   ======== A Handy Little Nodeunit Reference ========
@@ -58,7 +58,8 @@ exports.esnext = {
     testFilesAreEqual(test, 'test/actual/without_generator.js', 'test/fixtures/generator.js');
   },
   all_together: function(test) {
-    // Run the compiled output through esprima and see if it produces valid ES5 output
+    // Run the compiled output through esprima
+    // and see if it produces valid ES5 output
     test.expect(1);
     test.doesNotThrow(function() {
       esprima.parse(grunt.file.read('test/actual/all_together.js'));

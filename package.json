@@ -17,6 +17,7 @@
   },
   "keywords": [
     "gruntplugin",
+    "ecmascript",
     "es6",
     "esnext",
     "harmony",
@@ -44,14 +45,14 @@
     "grunt": "~0.4.1"
   },
   "devDependencies": {
+    "esprima": "^1.1.1",
     "grunt": "~0.4.4",
-    "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-clean": "~0.5.0",
-    "grunt-release": "~0.7.0",
-    "load-grunt-tasks": "^0.4.0",
-    "time-grunt": "^0.3.1",
-    "jshint-stylish": "~0.1.5",
+    "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-nodeunit": "^0.3.3",
-    "esprima": "^1.1.1"
+    "grunt-release": "~0.7.0",
+    "jshint-stylish": "~0.1.5",
+    "load-grunt-tasks": "^0.4.0",
+    "time-grunt": "^0.3.1"
   }
 }

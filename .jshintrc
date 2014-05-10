@@ -1,8 +1,10 @@
 {
   "camelcase": true,
-  "globalstrict": true,
+  "eqeqeq": true,
+  "strict": true,
   "indent": 2,
   "quotmark": "single",
   "browser": false,
-  "node": true
+  "node": true,
+  "esnext": true
 }

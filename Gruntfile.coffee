@@ -15,7 +15,7 @@ module.exports = (grunt) ->
       options:
         jshintrc: '.jshintrc'
         reporter: require 'jshint-stylish'
-      all: ['tasks/*.js']
+      all: ['{src,test}/*.js']
 
     clean:
       all: ['test/actual/*', 'tasks']

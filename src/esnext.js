@@ -19,7 +19,7 @@ var defaultOptions = {
   sourceMap: false
 };
 
-module.exports = function (grunt) {
+module.exports = grunt => {
   grunt.registerMultiTask('esnext', 'Transpile JS.next to JS.today', function() {
     var options = this.options(defaultOptions);
   

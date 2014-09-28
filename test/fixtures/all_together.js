@@ -52,4 +52,3 @@ var chugger = p.chug(20, 3)
 while (!(info = chugger.next()).done) {
   console.log(`chugged ${info.value} ounces`);
 }
-

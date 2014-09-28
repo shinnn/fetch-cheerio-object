@@ -5,6 +5,8 @@
 module.exports = (grunt) ->
   'use strict'
   
+  path = require 'path'
+  
   { compile } = require 'esnext'
   
   require('time-grunt') grunt
@@ -18,9 +20,15 @@ module.exports = (grunt) ->
       all: ['{src,test}/*.js']
 
     clean:
-      all: ['test/actual/*', 'tasks']
+      all: ['test/actual/*', 'tmp']
 
     esnext:
+      no_src:
+        src: 'foo/*.js'
+        dest: 'bar'
+      test:
+        src: ['test/test.js']
+        dest: 'tmp/test.js'
       without_classes:
         options:
           'class': false
@@ -63,21 +71,43 @@ module.exports = (grunt) ->
         dest: 'test/actual/all_together_without_runtime.js'
       all_together:
         options:
-          generator:
-            includeRuntime: true
+          includeRuntime: true
         src: ['test/fixtures/all_together.js']
         dest: 'test/actual/all_together.js'
+      multiple_files_with_runtime:
+        options:
+          includeRuntime: true
+        src: ['test/fixtures/all_together.js', 'test/fixtures/empty.js']
+        dest: 'test/actual/multiple_files_with_runtime.js'
+      source_map:
+        options:
+          includeRuntime: true
+          sourceMap: true
+        src: ['test/fixtures/generator.js']
+        dest: 'test/actual/source_map.js'
+      source_map_name:
+        options:
+          sourceMapName: 'test/actual/foo/bar/source_map_name.js.map'
+        src: ['test/fixtures/class.js', 'test/fixtures/rest.js']
+        dest: 'test/actual/source_map_name.js'
+      absolute_map_name:
+        options:
+          sourceMapName: path.resolve 'test/actual/absolute_source_map_name.js.map'
+        src: ['test/fixtures/spread.js']
+        dest: 'test/actual/absolute_source_map_name.js'
+      inline_source_map:
+        options:
+          sourceMap: 'inline'
+        src: ['test/fixtures/arrow_function.js']
+        dest: 'test/actual/inline_source_map.js'
 
     # Unit tests.
     nodeunit:
-      tests: ['test/*_test.js']
+      test: ['<%= esnext.test.dest %>']
 
     release: {}
-  
+
   grunt.registerTask 'compile', ->
-    { code } = compile grunt.file.read 'src/esnext.js'
-    grunt.file.write 'tasks/esnext.js', code
-    
     # Actually load this plugin's task
     grunt.loadTasks 'tasks'
     grunt.task.run ['esnext']
@@ -88,5 +118,5 @@ module.exports = (grunt) ->
     'compile'
     'nodeunit'
   ]
-  
+
   grunt.registerTask 'default', ['test']

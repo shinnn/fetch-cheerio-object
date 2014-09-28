@@ -6,7 +6,6 @@ function *squareMaker() {
 }
 
 var squares = squareMaker();
-
 console.log(squares.next().value);
 console.log(squares.next().value);
 console.log(squares.next().value);

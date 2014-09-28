@@ -1,11 +1,11 @@
 # grunt-esnext
 
-[![NPM version](https://badge.fury.io/js/grunt-esnext.svg)](http://badge.fury.io/js/grunt-esnext)
+[![NPM version](https://badge.fury.io/js/grunt-esnext.svg)](https://www.npmjs.org/package/grunt-esnext)
 [![Build Status](https://travis-ci.org/shinnn/grunt-esnext.svg?branch=master)](https://travis-ci.org/shinnn/grunt-esnext)
 [![Dependency Status](https://david-dm.org/shinnn/grunt-esnext.svg)](https://david-dm.org/shinnn/grunt-esnext)
 [![devDependency Status](https://david-dm.org/shinnn/grunt-esnext/dev-status.svg)](https://david-dm.org/shinnn/grunt-esnext#info=devDependencies)
 
-Grunt task for compiling JS.next to JS.today with [esnext](https://github.com/square/esnext)
+Grunt task for compiling JS.next to JS.today, using [esnext](https://github.com/esnext/esnext)
 
 ## Getting Started
 
@@ -13,7 +13,7 @@ This plugin requires Grunt.
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
-```shell
+```sh
 npm install grunt-esnext --save-dev
 ```
 
@@ -29,7 +29,107 @@ Run this task with the `grunt esnext` command.
 
 ### Options
 
-[All esnext options](https://github.com/square/esnext/blob/master/lib/index.js#L63-L96) are available except for source map.
+#### sourceMap
+
+Type: `Boolean` or `String` (`"inline"`)  
+Default: `true` if `sourceMapName` option is specified, otherwise `false`
+
+Generate a source map (including [regenerator][regenerator] runtime if [`includeRuntime` option](#includeruntime) is enabled).
+
+`true` writes a source map file in addition to the compiled file. 
+
+`"inline"` appends a base64-encoded source map to the compiled file.
+
+#### sourceMapName
+
+Type: `String`  
+Default: Compiled file name + `.map`
+
+Rename source map files. Both relative path and absolute path are available.
+
+#### arrayComprehensions
+
+Type: `Boolean`  
+Default: `false`
+
+> Compile [ES6 array comprehensions](https://github.com/lukehoban/es6features#comprehensions).
+
+#### arrowFunction
+
+Type: `Boolean`  
+Default: `true`
+
+> Compile [ES6 arrow functions](https://github.com/lukehoban/es6features#arrows) into normal functions.
+
+#### class
+
+Type: `Boolean`  
+Default: `true`
+
+> Compile [ES6 classes](https://github.com/lukehoban/es6features#classes) into ES5 constructors.
+
+#### computedPropertyKeys
+
+Type: `Boolean`  
+Default: `true`
+
+> Compile [ES6 computed property keys][object].
+
+#### defaultParams
+
+Type: `Boolean`  
+Default: `true`
+
+> Compile [ES6 default parameters][params] to ES5.
+
+#### destructuring
+
+Type: `Boolean`  
+Default: `true`
+
+> Compile [ES6 destructuring assignment](https://github.com/lukehoban/es6features#destructuring).
+
+#### generator
+
+Type: `Boolean`  
+Default: `true`
+
+> Compile [generator functions](https://github.com/lukehoban/es6features#generators) into ES5.
+
+#### includeRuntime
+
+Type: `Boolean`  
+Default: `false`
+
+Include [regenerator]([regenerator]) runtime library if [`generator` option](#generator) is enabled. Even though source is more than one file, runtime is appended to the concatenated file only once.
+
+#### objectConcise
+
+Type: `Boolean`  
+Default: `false`
+
+> Compile [object literal concise method definitions][object].
+
+#### rest
+
+Type: `Boolean`  
+Default: `false`
+
+> Compile [rest params][params] into ES5.
+
+#### spread
+
+Type: `Boolean`  
+Default: `false`
+
+> Compile [spread operator][params].
+
+#### templates
+
+Type: `Boolean`  
+Default: `false`
+
+> Compile [template strings](https://github.com/lukehoban/es6features#template-strings) into ES5.
 
 ## Usage Example
 
@@ -50,12 +150,12 @@ grunt.loadNpmTasks('grunt-esnext');
 grunt.registerTask('default', ['esnext']);
 ```
 
-## TODO
-
-* Support source map
-
 ## License
 
 Copyright (c) 2014 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT license](./LICENSE)
+
+[object]: https://github.com/lukehoban/es6features#enhanced-object-literals
+[params]: https://github.com/lukehoban/es6features#default--rest--spread
+[regenerator]: https://github.com/facebook/regenerator

@@ -1,5 +1,0 @@
-.travis.yml
-.jshintrc
-Gruntfile.coffee
-src/
-test/

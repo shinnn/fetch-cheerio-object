@@ -9,6 +9,7 @@ var path = require('path');
 var chalk = require('chalk');
 var esnextTransform = require('esnext').transform;
 var esprima = require('esprima-fb');
+var inlineSourceMapComment = require('inline-source-map-comment');
 var isAbsolutePath = require('is-absolute');
 var recast = require('recast');
 var regeneratorRuntimePath = require('regenerator').runtime.path;
@@ -85,8 +86,7 @@ module.exports = function(grunt) {
       
       var code = result.code;
       if (options.sourceMap === 'inline') {
-        code += '\n//# sourceMappingURL=data:application/json;base64,' +
-                new Buffer(sourceMap).toString('base64') + '\n';
+        code += '\n' + inlineSourceMapComment(sourceMap) + '\n';
         sourceMap = null;
       } else if (sourceMapPath) {
         code += '\n//# sourceMappingURL=' + sourceMapURL + '\n';

@@ -23,7 +23,19 @@
     "harmony",
     "compiler",
     "transpiler",
-    "language"
+    "language",
+    "arrow",
+    "arrow-function",
+    "class",
+    "computed-property",
+    "default-params",
+    "destructuring",
+    "generator",
+    "object-literal",
+    "rest",
+    "spread",
+    "template",
+    "unicode-regex"
   ],
   "engines": {
     "node": ">= 0.10.0"
@@ -43,12 +55,12 @@
   ],
   "dependencies": {
     "chalk": "^0.5.1",
-    "esnext": "^0.11.1",
+    "esnext": "^0.13.0",
     "esprima-fb": "^7001.1.0-dev-harmony-fb",
     "inline-source-map-comment": "^1.0.0",
     "is-absolute": "^0.1.5",
-    "recast": "^0.8.0",
-    "regenerator": "^0.6.7"
+    "recast": "^0.9.2",
+    "regenerator": "^0.7.1"
   },
   "peerDependencies": {
     "grunt": "^0.4.1"
@@ -60,7 +72,7 @@
     "grunt-contrib-nodeunit": "^0.4.1",
     "grunt-release": "^0.7.0",
     "jshint-stylish": "^1.0.0",
-    "load-grunt-tasks": "^0.6.0",
+    "load-grunt-tasks": "^1.0.0",
     "time-grunt": "^1.0.0"
   }
 }

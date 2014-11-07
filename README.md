@@ -106,30 +106,37 @@ Include [regenerator]([regenerator]) runtime library if [`generator` option](#ge
 #### objectConcise
 
 Type: `Boolean`  
-Default: `false`
+Default: `true`
 
 > Compile [object literal concise method definitions][object].
 
 #### rest
 
 Type: `Boolean`  
-Default: `false`
+Default: `true`
 
 > Compile [rest params][params] into ES5.
 
 #### spread
 
 Type: `Boolean`  
-Default: `false`
+Default: `true`
 
 > Compile [spread operator][params].
 
 #### templates
 
 Type: `Boolean`  
-Default: `false`
+Default: `true`
 
 > Compile [template strings](https://github.com/lukehoban/es6features#template-strings) into ES5.
+
+#### regexpu
+
+Type: `Boolean`  
+Default: `true`
+
+> Compile [unicode regexes](https://github.com/lukehoban/es6features#unicode) into ES5.
 
 ## Usage Example
 

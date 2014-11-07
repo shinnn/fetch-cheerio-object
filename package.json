@@ -1,7 +1,7 @@
 {
   "name": "grunt-esnext",
   "version": "0.1.1",
-  "description": "Grunt task to transform JS.next to JS.today with esnext",
+  "description": "esnext plugin for Grunt",
   "homepage": "https://github.com/shinnn/grunt-esnext",
   "repository": {
     "type": "git",
@@ -12,7 +12,6 @@
   },
   "author": {
     "name": "Shinnosuke Watanabe",
-    "email": "snnskwtnb@gmail.com",
     "url": "https://github.com/shinnn"
   },
   "keywords": [
@@ -21,7 +20,9 @@
     "es6",
     "esnext",
     "harmony",
+    "compile",
     "compiler",
+    "transpile",
     "transpiler",
     "language",
     "arrow",

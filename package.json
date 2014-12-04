@@ -71,7 +71,6 @@
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-nodeunit": "^0.4.1",
-    "grunt-release": "^0.7.0",
     "jshint-stylish": "^1.0.0",
     "load-grunt-tasks": "^1.0.0",
     "time-grunt": "^1.0.0"

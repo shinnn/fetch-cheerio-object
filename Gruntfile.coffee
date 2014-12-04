@@ -105,8 +105,6 @@ module.exports = (grunt) ->
     nodeunit:
       test: ['<%= esnext.test.dest %>']
 
-    release: {}
-
   grunt.registerTask 'compile', ->
     # Actually load this plugin's task
     grunt.loadTasks 'tasks'

@@ -2,14 +2,7 @@
   "name": "grunt-esnext",
   "version": "0.2.0",
   "description": "esnext plugin for Grunt",
-  "homepage": "https://github.com/shinnn/grunt-esnext",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shinnn/grunt-esnext.git"
-  },
-  "bugs": {
-    "url": "https://github.com/shinnn/grunt-esnext/issues"
-  },
+  "repository": "shinnn/grunt-esnext",
   "author": {
     "name": "Shinnosuke Watanabe",
     "url": "https://github.com/shinnn"
@@ -56,12 +49,12 @@
   ],
   "dependencies": {
     "chalk": "^0.5.1",
-    "esnext": "^0.13.0",
-    "esprima-fb": "^8001.1001.0-dev-harmony-fb",
-    "inline-source-map-comment": "^1.0.0",
+    "esnext": "^0.13.2",
+    "esprima-fb": "^8001.2001.0-dev-harmony-fb",
+    "inline-source-map-comment": "^1.0.2",
     "is-absolute": "^0.1.5",
-    "recast": "^0.9.8",
-    "regenerator": "^0.8.0"
+    "recast": "^0.9.11",
+    "regenerator": "^0.8.2"
   },
   "peerDependencies": {
     "grunt": "^0.4.1"
@@ -72,7 +65,7 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-nodeunit": "^0.4.1",
     "jshint-stylish": "^1.0.0",
-    "load-grunt-tasks": "^1.0.0",
+    "load-grunt-tasks": "^2.0.0",
     "time-grunt": "^1.0.0"
   }
 }

@@ -38,8 +38,7 @@
     "test": "grunt test"
   },
   "files": [
-    "tasks",
-    "LICENSE"
+    "tasks"
   ],
   "licenses": [
     {
@@ -49,12 +48,12 @@
   ],
   "dependencies": {
     "chalk": "^0.5.1",
-    "esnext": "^0.13.2",
-    "esprima-fb": "^8001.2001.0-dev-harmony-fb",
-    "inline-source-map-comment": "^1.0.2",
+    "esnext": "^0.14.0",
+    "esprima-fb": "^10001.1.0-dev-harmony-fb",
+    "inline-source-map-comment": "^1.0.3",
     "is-absolute": "^0.1.5",
-    "recast": "^0.9.11",
-    "regenerator": "^0.8.2"
+    "recast": "^0.9.15",
+    "regenerator": "^0.8.9"
   },
   "peerDependencies": {
     "grunt": "^0.4.1"
@@ -62,10 +61,10 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-jshint": "^0.11.0",
     "grunt-contrib-nodeunit": "^0.4.1",
     "jshint-stylish": "^1.0.0",
-    "load-grunt-tasks": "^2.0.0",
+    "load-grunt-tasks": "^3.0.0",
     "time-grunt": "^1.0.0"
   }
 }

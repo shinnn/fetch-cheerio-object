@@ -1,4 +1,4 @@
-'use strong';
+'use strict';
 
 const cheerio = require('cheerio');
 const nodeFetch = require('node-fetch');

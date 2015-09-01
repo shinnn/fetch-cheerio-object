@@ -1,11 +1,10 @@
-init: git config --global core.autocrlf input
 shallow_clone: true
 version: '{build}'
 skip_tags: true
 install:
-  - ps: Install-Product node 3
+  - ps: Install-Product node 4
   - npm install --production
   - npm install tape
 build: off
-test_script: node --strong_mode --harmony_arrow_functions test.js
+test_script: node --strong_mode --throw-deprecation --trace-sync-io --track-heap-objects test.js
 cache: node_modules

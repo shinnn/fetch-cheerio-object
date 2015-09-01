@@ -4,7 +4,7 @@ git:
 branches:
   except: /^v\d/
 language: node_js
-node_js: iojs
+node_js: stable
 notifications:
   email: false
 after_script: npm run-script coveralls

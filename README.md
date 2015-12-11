@@ -4,8 +4,8 @@
 [![Build Status](https://travis-ci.org/shinnn/fetch-cheerio-object.svg?branch=master)](https://travis-ci.org/shinnn/fetch-cheerio-object)
 [![Build status](https://ci.appveyor.com/api/projects/status/lpw1typ8fwp3ffh6?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/fetch-cheerio-object)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/fetch-cheerio-object.svg)](https://coveralls.io/github/shinnn/fetch-cheerio-object?branch=master)
-[![Dependency Status](https://img.shields.io/david/shinnn/fetch-cheerio-object.svg?label=deps)](https://david-dm.org/shinnn/fetch-cheerio-object)
-[![devDependency Status](https://img.shields.io/david/dev/shinnn/fetch-cheerio-object.svg?label=devDeps)](https://david-dm.org/shinnn/fetch-cheerio-object#info=devDependencies)
+[![Dependency Status](https://david-dm.org/shinnn/fetch-cheerio-object.svg)](https://david-dm.org/shinnn/fetch-cheerio-object)
+[![devDependency Status](https://david-dm.org/shinnn/fetch-cheerio-object/dev-status.svg)](https://david-dm.org/shinnn/fetch-cheerio-object#info=devDependencies)
 
 [Fetch](https://fetch.spec.whatwg.org/) a HTML and parse it as a [cheerio](https://cheeriojs.github.io/cheerio/) object
 

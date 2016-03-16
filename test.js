@@ -1,3 +1,4 @@
+/* eslint-disable newline-per-chained-call */
 'use strong';
 
 const fetchCheerioObject = require('.');
@@ -10,7 +11,8 @@ test('fetchCheerioObject()', t => {
 
   fetchCheerioObject('https://example.com/').then($ => {
     t.strictEqual(
-      $('head').find(':not([charset])').remove().end().html().trim(),
+      $('head')
+      .find(':not([charset])').remove().end().html().trim(),
       '<meta charset="utf-8">',
       'should fetch a HTML and parse it as a cheerio object.'
     );

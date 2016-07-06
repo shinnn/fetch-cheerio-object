@@ -1,12 +1,12 @@
 {
   "name": "fetch-cheerio-object",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Fetch a HTML and parse it as a cheerio object",
   "repository": "shinnn/fetch-cheerio-object",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
     "pretest": "eslint --config @shinnn/node index.js test.js",
-    "test": "node --strong_mode --throw-deprecation --trace-sync-io --track-heap-objects test.js",
+    "test": "node --strong_mode --throw-deprecation --track-heap-objects test.js",
     "coverage": "node --strong_mode node_modules/.bin/istanbul cover test.js",
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
   },

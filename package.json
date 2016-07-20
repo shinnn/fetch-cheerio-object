@@ -5,7 +5,7 @@
   "repository": "shinnn/fetch-cheerio-object",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
-    "pretest": "eslint --config @shinnn/node index.js test.js",
+    "pretest": "eslint --fix --config @shinnn/node index.js test.js",
     "test": "node --strong_mode --throw-deprecation --track-heap-objects test.js",
     "coverage": "node --strong_mode node_modules/.bin/istanbul cover test.js",
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
@@ -29,8 +29,8 @@
     "node-fetch": "^1.3.3"
   },
   "devDependencies": {
-    "@shinnn/eslint-config-node": "^2.0.0",
-    "eslint": "^2.4.0",
+    "@shinnn/eslint-config-node": "^3.0.0",
+    "eslint": "^3.1.1",
     "istanbul": "^0.4.2",
     "istanbul-coveralls": "^1.0.3",
     "tape": "^4.5.1"

@@ -1,10 +1,7 @@
 shallow_clone: true
-version: '{build}'
 skip_tags: true
 install:
-  - ps: Install-Product node 4
-  - npm install --production
-  - npm install tape
+  - ps: Install-Product node Stable
+  - npm install
 build: off
-test_script: node --strong_mode --throw-deprecation --trace-sync-io --track-heap-objects test.js
-cache: node_modules
+test_script: node --throw-deprecation test.js

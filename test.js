@@ -1,5 +1,5 @@
 /* eslint-disable newline-per-chained-call */
-'use strong';
+'use strict';
 
 const fetchCheerioObject = require('.');
 const test = require('tape');

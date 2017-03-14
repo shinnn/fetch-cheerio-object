@@ -1,6 +1,6 @@
 {
   "name": "fetch-cheerio-object",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Fetch a HTML and parse it as a cheerio object",
   "repository": "shinnn/fetch-cheerio-object",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",

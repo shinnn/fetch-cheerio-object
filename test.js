@@ -4,9 +4,7 @@ const fetchCheerioObject = require('.');
 const test = require('tape');
 
 test('fetchCheerioObject()', t => {
-  t.plan(7);
-
-  t.equal(fetchCheerioObject.name, 'fetchCheerioObject', 'should have a function name.');
+  t.plan(6);
 
   fetchCheerioObject('https://example.org/').then($ => {
     t.equal(
@@ -34,8 +32,12 @@ test('fetchCheerioObject()', t => {
     );
   }).catch(t.fail);
 
-  fetchCheerioObject('https://www.npmjs.com/favicon.ico').then($ => {
-    t.equal($('*').html(), null, 'should even read a non-text files.');
+  fetchCheerioObject('https://example.org/', {timeout: 1}).then(t.fail, ({message}) => {
+    t.equal(
+      message,
+      'network timeout at: https://example.org/',
+      'should support node-fetch options.'
+    );
   }).catch(t.fail);
 
   fetchCheerioObject('https://n/o/t/f.o.u.n.d').then(t.fail, ({message}) => {

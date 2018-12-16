@@ -8,5 +8,5 @@ function fetchResponseToText(fetchResponse) {
 }
 
 module.exports = function fetchCheerioObject(url, options) {
-  return nodeFetch(url).then(fetchResponseToText).then(body => cheerio.load(body, options));
+  return nodeFetch(url, options).then(fetchResponseToText).then(body => cheerio.load(body, options));
 };

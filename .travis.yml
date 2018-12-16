@@ -1,7 +1,6 @@
-git:
-  depth: 1
 branches:
   except: /^v\d/
+dist: xenial
 language: node_js
 node_js: node
 after_script:

@@ -2,7 +2,6 @@
 
 [![npm version](https://img.shields.io/npm/v/fetch-cheerio-object.svg)](https://www.npmjs.com/package/fetch-cheerio-object)
 [![Build Status](https://travis-ci.com/shinnn/fetch-cheerio-object.svg?branch=master)](https://travis-ci.com/shinnn/fetch-cheerio-object)
-[![Build status](https://ci.appveyor.com/api/projects/status/lpw1typ8fwp3ffh6?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/fetch-cheerio-object)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/fetch-cheerio-object.svg)](https://coveralls.io/github/shinnn/fetch-cheerio-object?branch=master)
 
 A [Node.js](https://nodejs.org/) module to [fetch](https://fetch.spec.whatwg.org/) an HTML and parse it as a [cheerio](https://cheerio.js.org/) object
